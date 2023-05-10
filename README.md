@@ -19,9 +19,12 @@ dem_autoencoder_segmentation.py のいじったところ
 47:parser.add_argument('--time', '-t', type=int, default=101)  →default=10
 
 network.pyのいじったところ
+
 209:def __init__(self, num_time=20, l_tau=0.8, soft=False, rec=False, forget=False, dual=False, power=False, gpu=True,↓
     def __init__(self, num_time=10, l_tau=0.8, soft=False, rec=False, forget=False, dual=False, power=False, gpu=True,
-    
+
+229:self.up_samp = nn.Upsample(scale_factor=2, →self.up_samp = nn.Upsample(scale_factor=8,
+ 
     
 313: out_rec = torch.stack(out_rec,dim=1)  →out_rec = torch.stack(out_rec,dim=1)
 
