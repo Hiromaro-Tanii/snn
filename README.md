@@ -24,7 +24,7 @@ network.pyのいじったところ
     def __init__(self, num_time=10, l_tau=0.8, soft=False, rec=False, forget=False, dual=False, power=False, gpu=True,
 
 229:self.up_samp = nn.Upsample(scale_factor=2, →self.up_samp = nn.Upsample(scale_factor=8,
- 
+  (ここのscale_factorによって313行目のエラーの1024が変わる. scale_factor=2だと[1, 1, 64, 64]  →[8, 1, 64, 64] にしたい )
     
 313: out_rec = torch.stack(out_rec,dim=1)  →out_rec = torch.stack(out_rec,dim=1)
 (ここのスケールによって313行目のエラーの1024が変わる)
