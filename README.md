@@ -4,8 +4,11 @@
 dem_autoencoder_segmentation.pyのいじったところ
 
 35:image = image.reshape(4096,20)→(4096,10)
+
 45:parser.add_argument('--batch', '-b', type=int, default=32)  →default=8
+
 46: parser.add_argument('--epoch', '-e', type=int, default=100)  →default=50
+
 47:parser.add_argument('--time', '-t', type=int, default=101)  →default=10
 
 実行↓
