@@ -27,7 +27,7 @@ network.pyのいじったところ
  
     
 313: out_rec = torch.stack(out_rec,dim=1)  →out_rec = torch.stack(out_rec,dim=1)
-
+(ここのスケールによって313行目のエラーの1024が変わる)
 
 network.py  313行目でエラー発生
 stack expects each tensor to be equal size, but got [8, 1, 64, 64] at entry 0 and [8, 1, 1024, 1024] at entry 1
