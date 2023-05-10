@@ -14,5 +14,5 @@ dem_autoencoder_segmentation.pyのいじったところ
 実行↓
 network.py  313行目でエラー発生
 「stack expects each tensor to be equal size, but got [8, 1, 64, 64] at entry 0 and [1, 1, 64, 64] at entry 1」
-tensorを一致させないといけない。
+tensorを一致させる必要がある
 
